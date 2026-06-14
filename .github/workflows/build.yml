@@ -1,0 +1,23 @@
+name: Build Calculadora
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ejecutar:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12.3"
+
+      - name: Ejecutar calculadora
+        run: python main.py

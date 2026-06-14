@@ -20,4 +20,4 @@ jobs:
           python-version: "3.12.3"
 
       - name: Ejecutar calculadora
-        run: python main.py
+        run: python calculadora.py

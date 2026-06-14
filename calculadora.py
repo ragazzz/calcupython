@@ -36,3 +36,5 @@ def fact(n):
         resultado *= i
 
     return resultado
+
+print('3 + 7 = ', sum(3, 7))

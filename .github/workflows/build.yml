@@ -17,7 +17,17 @@ jobs:
       - name: Instalar Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12.3"
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install pytest pylint
 
       - name: Ejecutar calculadora
         run: python calculadora.py
+
+      - name: Ejecutar pruebas
+        run: pytest
+
+      - name: Analizar calidad del código
+        run: pylint calculadora.py
